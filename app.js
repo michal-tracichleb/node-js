@@ -5,6 +5,7 @@ const app = express();
 // Podpięcie css
 var path = require('path')
 app.use('/assets', express.static(path.join(__dirname, "./assets")));
+app.use('/js', express.static(path.join(__dirname, "./js")));
 
 //ustawienie, ze moja aplikacja musi korzystac z silnika hbs 
 app.set("view engine", 'hbs')
