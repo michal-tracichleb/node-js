@@ -1,6 +1,11 @@
 const express = require("express");
 const port = 3000;
 const app = express();
+
+// Podpięcie css
+var path = require('path')
+app.use('/assets', express.static(path.join(__dirname, "./assets")));
+
 //ustawienie, ze moja aplikacja musi korzystac z silnika hbs 
 app.set("view engine", 'hbs')
 //gdy uzytkownik wchodzi na stronę  
