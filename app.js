@@ -1,11 +1,12 @@
-const express = require("express"); //nie korzystam już z http!!
+const express = require("express");
 const port = 3000;
 const app = express();
-//gdy uzytkownik wchodzi na stronę główną
+//ustawienie, ze moja aplikacja musi korzystac z silnika hbs 
+app.set("view engine", 'hbs')
+//gdy uzytkownik wchodzi na stronę  
 app.get('/', function (req, res) {
-    res.send("Hello World");
+    res.render('index')
 })
-//gdy uzytkownik wchodzi na stronę o nas
 app.get('/about', function (req, res) {
     res.send("My site")
 })
